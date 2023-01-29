@@ -19,10 +19,10 @@ How to read it: Player 1 won 7.00% of the time against Player 2. Player 2 won 52
 
 ## How to build from sources
 
-1. Install Java 1.8 (JDK)
-2. Install Maven. 
-3. Run in command line `<path_to_maven>/mvn package` inside root directory of this repo.
-4. ./target/cg-brutaltester-0.0.1-SNAPSHOT.jar — is compiled brutaltester! You can rename it to cg-brutaltester.jar to make command line above work.
+1. Install Latest MS Visual Studio.
+2. Load project in ./source/
+3. Right click on project in Solution Explorer, select Properties. Under General, Use the drop down for C++ Language Standard and set to ISO C++ 20 Standard.
+4. In VS main menu select Build > build, or hit F7.
 
 Now you should get (or compile from sources) referee for specific game and make it work together with brutaltester as stated above.
 
