@@ -17,7 +17,7 @@ At the end of the command, you will get something like this:
 
 How to read it: Player 1 won 7.00% of the time against Player 2. Player 2 won 52.70% of the time against Player 1. The total is not 100% because you have some draws.
 
-Unfortunately, this does not work for GO executables. I have minimized this down to my process class and a GO HelloWorld for testing, just cannot read from GO. Every other language seems to work... Hopefully someone from the comunity can fix it. 
+Unfortunately, this does not work for GO executables. I have minimized this down to my process class and a GO HelloWorld for testing, just cannot read from GO. Every other language seems to work... Hopefully someone from the community can fix it. 
 
 ## How to build from sources
 
