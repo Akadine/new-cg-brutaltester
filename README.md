@@ -48,7 +48,7 @@ The number of threads to spawn for the games. If you give 2, it means that you w
 
 The number of games to play. The given example will play 100 games.
 
-### Logs directory `-l <string>` (Optional)
+### Logs directory `-d <string>` (Optional)
 
 You may need the logs of the file. If you specify a directory, all games will be saved in the given directory. The files contain standard and error outputs of all processes (referee and players).
 
