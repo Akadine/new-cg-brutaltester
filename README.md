@@ -2,7 +2,7 @@
 
 new-cg-brutaltester is a Java local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
 
-    new-cg-brutal-tester.exe -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -l logs
+    new-cg-brutal-tester.exe -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -d logs
 
 At the end of the command, you will get something like this:
 
@@ -85,7 +85,7 @@ Display this help :
         -n      Number of games to play. Default 1.
         -s      Swap player positions.
         -i      Initial seed. For repetable tests
-        -d      Lod directory.
+        -d      Log directory.
         -l      Log level. 0 verbose, 1 info, 2 warning (default), 3 error, and 4 fatal. Only logs that level and higher. ex. if set to 3, only error and fatal levels logs are created.
         -o      Old mode
 
