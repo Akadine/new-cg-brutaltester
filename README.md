@@ -1,12 +1,12 @@
-# cg-brutaltester
+# new-cg-brutaltester
 
-cg-brutaltester is a Java local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
+new-cg-brutaltester is a Java local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
 
-    java -jar cg-brutaltester.jar -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -l "./logs/"
+    java -jar cg-brutaltester.jar -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -l logs
 
 At the end of the command, you will get something like this:
 
-    13:19:47,629 INFO  [com.magusgeek.brutaltester.Main] *** End of games ***
+    INFO *** End of games ***
     +----------+----------+----------+
     | Results  | Player 1 | Player 2 |
     +----------+----------+----------+
