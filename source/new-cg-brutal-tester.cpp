@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
     opt.Add("-n", true, "Number of games to play. Default 1.");
     opt.Add("-s", false, "Swap player positions.");
     opt.Add("-i", true, "Initial seed. For repetable tests");
-    opt.Add("-d", true, "Lod directory.");
+    opt.Add("-d", true, "Log directory.");
     opt.Add("-l", true, "Log level. 0 verbose, 1 info, 2 warning (default), 3 error, and 4 fatal. Only logs that level and higher. ex. if set to 3, only error and fatal levels logs are created.");
     opt.Add("-o", false, "Old mode");
 
