@@ -21,7 +21,7 @@ Unfortunately, this does not work for GO executables. I have minimized this down
 
 ## How to build from sources
 
-1. Install Latest MS Visual Studio.
+1. On WINDOWS only (for now) Install the latest MS Visual Studio.
 2. Load project in ./source/
 3. Right click on project in Solution Explorer, select Properties. Under General, Use the drop down for C++ Language Standard and set to ISO C++ 20 Standard.
 4. In VS main menu select Build > build, or hit F7.
