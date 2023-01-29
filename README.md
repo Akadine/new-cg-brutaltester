@@ -1,6 +1,6 @@
 # new-cg-brutaltester
 
-new-cg-brutaltester is a Java local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
+new-cg-brutal-tester is a C++ 20 local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
 
     new-cg-brutal-tester.exe -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -d logs
 
