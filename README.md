@@ -65,7 +65,7 @@ It allows to use the same seeds in different runs. You can't select individual s
 
 Since Botters of the Galaxy and Ultimate Tic Tac Toe, Codingame changed a lot the way of creating a referee. Because of that, all games created before Botters of the Galaxy and Ultimate Tic Tac Toe use the "old way". If you want to use an old referee, you have to use this flag. 
 
-### Log Level `-l`
+### Log Level `-l <int>`(Optional, defaults to 2)
 
 My log class has 5 levels, 0-5, VERBOSE, INFO, WARN, ERR, FATAL. This is the lowest level to log, if set to 2 or WARN, then you get all WARN, ERR, FATAL level logs. 
 
