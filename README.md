@@ -2,7 +2,7 @@
 
 new-cg-brutaltester is a Java local tool to simulate the [CodinGame](https://www.codingame.com/) multiplayer arena. How does it work? Very simple:
 
-    java -jar cg-brutaltester.jar -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -l logs
+    new-cg-brutal-tester.exe -r "java -jar cg-referee-ghost-in-the-cell.jar" -p1 "./myCode.exe" -p2 "php myCode.php" -t 2 -n 100 -l logs
 
 At the end of the command, you will get something like this:
 
@@ -16,6 +16,8 @@ At the end of the command, you will get something like this:
     +----------+----------+----------+
 
 How to read it: Player 1 won 7.00% of the time against Player 2. Player 2 won 52.70% of the time against Player 1. The total is not 100% because you have some draws.
+
+Unfortunately, this does not work for GO executables. I have minimized this down to my process class and a GO HelloWorld for testing, just cannot read from GO. Every other language seems to work... Hopefully someone from the comunity can fix it. 
 
 ## How to build from sources
 
@@ -63,27 +65,29 @@ It allows to use the same seeds in different runs. You can't select individual s
 
 Since Botters of the Galaxy and Ultimate Tic Tac Toe, Codingame changed a lot the way of creating a referee. Because of that, all games created before Botters of the Galaxy and Ultimate Tic Tac Toe use the "old way". If you want to use an old referee, you have to use this flag. 
 
-### Verbose `-v`
+### Log Level `-l`
 
-Activate the verbose mode. Spam incoming.
+My log class has 5 levels, 0-5, VERBOSE, INFO, WARN, ERR, FATAL. This is the lowest level to log, if set to 2 or WARN, then you get all WARN, ERR, FATAL level logs. 
 
 ### Help `-h`
 
 Display this help :
 
-    usage: -r <referee command line> -p1 <player1 command line> -p2 <player2 command line> -p3 <player3 command line> -p4 <player4 command line> [-v -n <games> -t <thread>]
-     -h          Print the help
-     -l <arg>    A directory for games logs
-     -n <arg>    Number of games to play. Default 1.
-     -p1 <arg>   Required. Player 1 command line.
-     -p2 <arg>   Required. Player 2 command line.
-     -p3 <arg>   Player 3 command line.
-     -p4 <arg>   Player 4 command line.
-     -r <arg>    Required. Referee command line.
-     -s          Swap player positions
-     -i <arg>    Initial Seed. For repeteable tests.
-     -t <arg>    Number of thread to spawn for the games. Default 1.
-     -v          Verbose mode. Spam incoming.
+    new-cg-brutal-tester.exe
+        -h      Displays this help.
+        -r      Required. Referee command line.
+        -p1     Required. Player 1 command line.
+        -p2     Required. Player 2 command line.
+        -P3     Player 3 command line.
+        -P4     Player 4 command line.
+        -v      Visualizer command line. Not implemented, hard sets threads to 1.
+        -t      Number of threads to spawn for the games. Default 1.
+        -n      Number of games to play. Default 1.
+        -s      Swap player positions.
+        -i      Initial seed. For repetable tests
+        -d      Lod directory.
+        -l      Log level. 0 verbose, 1 info, 2 warning (default), 3 error, and 4 fatal. Only logs that level and higher. ex. if set to 3, only error and fatal levels logs are created.
+        -o      Old mode
 
 ## How do I make my own referee?
 
@@ -150,7 +154,8 @@ If you have a bug or a problem with one of these referees, create an issue of th
  * Mean Max:
    * https://github.com/kevinsandow/cg-referee-mean-max (Java) (use it with `-o`)
  * Coders strike back:
-   * https://github.com/robostac/coders-strike-back-referee (Go) (use it with `-o`)
+   * https://github.com/robostac/coders-strike-back-referee (Go) (use it with `-o`) 
+   * this ^ is the only one I cannot get working with the new brutal tester. This was the one I really wanted to work!
  * Back to the Code:
    * https://github.com/eulerscheZahl/RefereeCollection (C#) (use it with `-o`)
  * Codebusters:
